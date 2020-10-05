@@ -55,9 +55,9 @@
 `ESlint`
 
 ### Доступ к серверу
-* IP адрес: http://84.201.135.24
-* Бэкенд проекта: https://api.newsexplorersergeivaskin.tk
-* https://newsexplorersergeivaskin.tk
+* IP адрес: http://84.201.135.228
+* Бэкенд проекта: https://api.svaskin.students.nomoreparties.co
+* https://svaskin.students.nomoreparties.co
 
 ### Развертывание проекта
 1. Установить `Node.js`

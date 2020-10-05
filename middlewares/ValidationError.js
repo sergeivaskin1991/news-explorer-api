@@ -1,5 +1,3 @@
-const { CAST_ERR, EMAIL_USE } = require('../errors/messageError');
-
 function ValidationError(err, req, res, next) {
   let { statusCode = 500, message } = err;
 
@@ -7,10 +5,10 @@ function ValidationError(err, req, res, next) {
     statusCode = 400;
   } else if (err.name === 'CastError') {
     statusCode = 400;
-    message = CAST_ERR;
+    message = 'id не найден';
   } else if (err.code === 11000) {
     statusCode = 409;
-    message = EMAIL_USE;
+    message = 'Этот email уже используется';
   }
   res.status(statusCode).send({
     message: statusCode === 500 ? 'Произошла ошибка' : message,

@@ -5,12 +5,11 @@ const helmet = require('helmet');
 const { errors } = require('celebrate');
 const cookieParser = require('cookie-parser');
 const limiter = require('./middlewares/limiter');
-const inСorrectURL = require('./errors/inСorrectURL');
-const ValidationError = require('./middlewares/ValidationError');
 const loggerPath = require('./middlewares/loggerPath');
 const router = require('./routes/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-
+const inСorrectURL = require('./inСorrectURL');
+const ValidationError = require('./middlewares/ValidationError');
 require('dotenv').config();
 
 const {
@@ -44,6 +43,5 @@ app.use(errors());
 app.use('/', ValidationError);
 
 app.listen(PORT, () => {
-  // eslint-disable-next-line no-console
   console.log(`Порт: ${PORT}`);
 });

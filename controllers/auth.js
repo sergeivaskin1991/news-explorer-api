@@ -24,7 +24,6 @@ module.exports.createUser = async (req, res, next) => {
   }
 };
 
-//Лог
 module.exports.login = async (req, res, next) => {
   const { email, password } = req.body;
   try {
