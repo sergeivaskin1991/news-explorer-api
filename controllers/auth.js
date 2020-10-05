@@ -2,9 +2,10 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const escape = require('escape-html');
 const User = require('../models/user');
+
 require('dotenv').config();
 
-// Регистрация
+// Регистрация пользователя
 module.exports.createUser = async (req, res, next) => {
   const {
     name, email, password,
@@ -24,6 +25,7 @@ module.exports.createUser = async (req, res, next) => {
   }
 };
 
+// Залогинивание пользователя
 module.exports.login = async (req, res, next) => {
   const { email, password } = req.body;
   try {

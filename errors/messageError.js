@@ -1,4 +1,3 @@
-// Сообщения ошибок
 const ID = 'Неверный  ID';
 const CAST_ERR = 'ID не найден';
 const EMPTY_FIELD = 'Строка не заполнена';
