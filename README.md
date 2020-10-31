@@ -55,7 +55,7 @@
 `ESlint`
 
 ### Доступ к серверу
-* IP адрес: http://130.193.39.65
+* IP адрес: http://84.201.131.221
 * Бэкенд проекта: https://api.svaskin.students.nomoreparties.co
 * https://svaskin.students.nomoreparties.co
 
