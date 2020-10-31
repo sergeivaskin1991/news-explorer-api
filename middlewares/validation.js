@@ -1,5 +1,5 @@
 const { celebrate, Joi } = require('celebrate');
-const validatorUrlErr = require('./validatorUrlErr');
+const validUrl = require('./validUrl');
 const {
   ID,
   DATE,
@@ -36,8 +36,8 @@ const createArticleValid = celebrate({
       .error(new Error(`${EMPTY_FIELD}${DATE}`)),
     source: Joi.string().required().trim()
       .error(new Error(`${EMPTY_FIELD}${SOURCE}`)),
-    link: Joi.required().custom((v) => validatorUrlErr(v)),
-    image: Joi.required().custom((v) => validatorUrlErr(v)),
+    link: Joi.required().custom((v) => validUrl(v)),
+    image: Joi.required().custom((v) => validUrl(v)),
   }),
 });
 

@@ -1,6 +1,7 @@
+// Обработчик ошибок
 const { CAST_ERR, EMAIL_USE } = require('../errors/messageError');
 
-function ValidationError(err, req, res, next) {
+function HandlerError(err, req, res, next) {
   let { statusCode = 500, message } = err;
 
   if (err.name === 'ValidationError') {
@@ -17,4 +18,4 @@ function ValidationError(err, req, res, next) {
   });
   next();
 }
-module.exports = ValidationError;
+module.exports = HandlerError;

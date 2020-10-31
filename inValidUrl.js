@@ -1,5 +1,5 @@
-const NotFoundError = require('./not-found-err');
-const { NOT_FOUND } = require('./messageError');
+const NotFoundError = require('./errors/not-found-err');
+const { NOT_FOUND } = require('./errors/messageError');
 
 // Обработка некорректного адреса
 module.exports = () => {
