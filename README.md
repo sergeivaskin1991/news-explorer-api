@@ -56,7 +56,7 @@
 
 ### Доступ к серверу
 * IP адрес: http://84.201.134.192
-* Бэкенд проекта: https://api.svaskin.students.nomoreparties.co
+* Бэкенд проекта: http://api.svaskin.students.nomoreparties.co
 * https://svaskin.students.nomoreparties.co
 
 ### Развертывание проекта

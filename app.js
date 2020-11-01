@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
-const cors = require('cors');
+// const cors = require('cors');
 const { errors } = require('celebrate');
 const cookieParser = require('cookie-parser');
 const limiter = require('./middlewares/limiter');
@@ -31,10 +31,10 @@ const whiteList = [
   'https://sergeivaskin.github.io',
   'http://sergeivaskin.github.io',
   'http://localhost:8081',
-  'http://api.svaskin.students.nomoreparties.co',
-  'https://api.svaskin.students.nomoreparties.co',
-  'http://svaskin.students.nomoreparties.co',
-  'https://svaskin.students.nomoreparties.co'];
+  'http://api.vaskin.students.nomoreparties.co',
+  'https://api.vaskin.students.nomoreparties.co',
+  'http://vaskin.students.nomoreparties.co',
+  'https://vaskin.students.nomoreparties.co'];
 
 const corsOptions = {
   origin: (origin, callback) => {
@@ -55,7 +55,7 @@ app.use(limiter);
 app.use(helmet());
 app.use(requestLogger);
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(router);
 
 app.use('*', inValidUrl);
