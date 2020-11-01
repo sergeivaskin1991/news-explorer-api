@@ -2,7 +2,7 @@ const User = require('../models/user');
 const NotFoundError = require('../errors/not-found-err');
 const NO_USER = require('../errors/messageError');
 
-// Полечние пользователя
+// Получние пользователя
 module.exports.getUser = async (req, res, next) => {
   const owner = req.user._id;
   try {

@@ -34,7 +34,7 @@ module.exports.createArticle = async (req, res, next) => {
   }
 };
 
-// Удаление статьи
+// Удаление статей
 module.exports.deleteArticle = async (req, res, next) => {
   // const { articleId } = req.params;
   const userId = req.user._id;
