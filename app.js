@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
-// const cors = require('cors');
+const cors = require('cors');
 const { errors } = require('celebrate');
 const cookieParser = require('cookie-parser');
 const limiter = require('./middlewares/limiter');
@@ -55,7 +55,7 @@ app.use(limiter);
 app.use(helmet());
 app.use(requestLogger);
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 app.use(router);
 
 app.use('*', inValidUrl);
