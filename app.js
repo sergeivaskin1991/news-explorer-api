@@ -33,8 +33,8 @@ const whiteList = [
   'http://localhost:8081',
   'http://api.vaskin.students.nomoreparties.co',
   'https://api.vaskin.students.nomoreparties.co',
-  'http://api.vaskin.students.nomoreparties.co',
-  'https://api.vaskin.students.nomoreparties.co'];
+  'http://vaskin.students.nomoreparties.co',
+  'https://vaskin.students.nomoreparties.co'];
 
 const corsOptions = {
   origin: (origin, callback) => {
@@ -46,25 +46,7 @@ const corsOptions = {
   },
   credentials: true,
 };
-// const corsOptions = {
-//   origin: (origin, callback) => {
-//     if (whiteList.includes(origin) || !origin) {
-//       callback(null, true);
-//     } else {
-//       callback(new Error('Not allowed by CORS'));
-//     }
-//   },
-//   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
-//   preflightContinue: false,
-//   optionsSuccessStatus: 204,
-//   allowedHeaders: [
-//     'Content-Type',
-//     'origin',
-//     'x-access-token',
-//     'authorization',
-//   ],
-//   credentials: true,
-// };
+
 
 app.use(loggerPath);
 app.use(bodyParser.json());
