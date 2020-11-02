@@ -48,7 +48,7 @@ const createUserValid = celebrate({
     email: Joi.string().required().email()
       .error(new Error(EMAIL)),
     password: Joi.string().pattern(
-      new RegExp('^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!&$%#? "])(?=\\S+$).*$'),
+      new RegExp('^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\\d)(?=\\S+$).*$'),
     ).error(new Error(PASSWORD_SIGNUP)),
     repeat_password: Joi.ref('password'),
   }),
