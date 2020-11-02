@@ -55,7 +55,7 @@
 `ESlint`
 
 ### Доступ к серверу
-* IP адрес: http://84.201.134.192
+* IP адрес: http://84.201.172.138
 * Бэкенд проекта: http://api.vaskin.students.nomoreparties.co
 * https://vaskin.students.nomoreparties.co
 
