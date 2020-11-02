@@ -28,8 +28,8 @@ mongoose.connect(DB_CONN, {
 });
 
 const whiteList = [
-  'https://sergeivaskin.github.io',
-  'http://sergeivaskin.github.io',
+  'https://sergeivaskin1991.github.io',
+  'http://sergeivaskin1991.github.io',
   'http://localhost:8081',
   'http://api.vaskin.students.nomoreparties.co',
   'https://api.vaskin.students.nomoreparties.co',

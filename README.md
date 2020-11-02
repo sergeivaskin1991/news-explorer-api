@@ -56,8 +56,8 @@
 
 ### Доступ к серверу
 * IP адрес: http://84.201.134.192
-* Бэкенд проекта: http://api.svaskin.students.nomoreparties.co
-* https://svaskin.students.nomoreparties.co
+* Бэкенд проекта: http://api.vaskin.students.nomoreparties.co
+* https://vaskin.students.nomoreparties.co
 
 ### Развертывание проекта
 1. Установить `Node.js`
