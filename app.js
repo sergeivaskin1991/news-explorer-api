@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
-const cors = require('cors');
+// const cors = require('cors');
 const { errors } = require('celebrate');
 const cookieParser = require('cookie-parser');
 const limiter = require('./middlewares/limiter');
@@ -27,25 +27,25 @@ mongoose.connect(DB_CONN, {
   useUnifiedTopology: true,
 });
 
-const whiteList = [
-  'https://sergeivaskin1991.github.io',
-  'http://sergeivaskin1991.github.io',
-  'http://localhost:8081',
-  'http://api.vaskin.students.nomoreparties.co',
-  'https://api.vaskin.students.nomoreparties.co',
-  'http://vaskin.students.nomoreparties.co',
-  'https://vaskin.students.nomoreparties.co'];
+// const whiteList = [
+//   'https://sergeivaskin1991.github.io',
+//   'http://sergeivaskin1991.github.io',
+//   'http://localhost:8081',
+//   'http://api.vaskin.students.nomoreparties.co',
+//   'https://api.vaskin.students.nomoreparties.co',
+//   'http://vaskin.students.nomoreparties.co',
+//   'https://vaskin.students.nomoreparties.co'];
 
-const corsOptions = {
-  origin: (origin, callback) => {
-    if (whiteList.includes(origin) || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
-};
+// const corsOptions = {
+//   origin: (origin, callback) => {
+//     if (whiteList.includes(origin) || !origin) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error('Not allowed by CORS'));
+//     }
+//   },
+//   credentials: true,
+// };
 
 app.use(loggerPath);
 app.use(bodyParser.json());
@@ -55,7 +55,7 @@ app.use(limiter);
 app.use(helmet());
 app.use(requestLogger);
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(router);
 
 app.use('*', inValidUrl);
